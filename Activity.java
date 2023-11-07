@@ -41,6 +41,69 @@ public class Activity {
                 if(KPH > 25)
                 {
                     this.intensity = Intensity.MODERATE;
+                    this.CalsBurned = Duration * 7;
+                }
+                if(KPH > 33)
+                {
+                    this.intensity = Intensity.VIGOROUS;
+                    this.CalsBurned = Duration * 13;
+                }
+                if(KPH > 40)
+                {
+                    this.intensity = Intensity.VERY_VIGOROUS;
+                    this.CalsBurned = Duration * 15;
+                }
+            }
+        }
+
+        if(this.getActivityType().equals("Running"))
+        {
+            this.CalsBurned = Duration *4.1;
+            if(KPH > 8)
+            {
+                this.intensity = Intensity.LIGHT;
+                this.CalsBurned = Duration * 7.2;
+
+                if(KPH > 12)
+                {
+                    this.intensity = Intensity.MODERATE;
+                    this.CalsBurned = Duration * 10;
+                }
+                if(KPH > 16)
+                {
+                    this.intensity = Intensity.VIGOROUS;
+                    this.CalsBurned = Duration * 15.5;
+                }
+                if(KPH > 24)
+                {
+                    this.intensity = Intensity.VERY_VIGOROUS;
+                    this.CalsBurned = Duration * 20.8;
+                }
+            }
+        }
+
+        if(this.getActivityType().equals("Swimming"))
+        {
+            this.CalsBurned = Duration *5;
+            if(KPH > 1.25)
+            {
+                this.intensity = Intensity.LIGHT;
+                this.CalsBurned = Duration * 6.3;
+
+                if(KPH > 2)
+                {
+                    this.intensity = Intensity.MODERATE;
+                    this.CalsBurned = Duration * 7.6;
+                }
+                if(KPH > 2.75)
+                {
+                    this.intensity = Intensity.VIGOROUS;
+                    this.CalsBurned = Duration * 8.9;
+                }
+                if(KPH > 3.5)
+                {
+                    this.intensity = Intensity.VERY_VIGOROUS;
+                    this.CalsBurned = Duration * 10.2;
                 }
             }
         }
